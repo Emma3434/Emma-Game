@@ -4,7 +4,7 @@ function signin() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    function signingIn(username, password, callback) {
+    function signingIn(username, password) {
         return fetch('https://emma-game-server.herokuapp.com/signin', {
             method: 'POST',
             headers: {
@@ -25,6 +25,14 @@ function signin() {
                     console.log(err);
                 })
             });
+    }
+    if (signingIn(username,password))
+    {
+        alert("success");
+    }
+    else
+    {
+        alert("fail");
     }
     /*function getActivity() {
         let jsonData;
