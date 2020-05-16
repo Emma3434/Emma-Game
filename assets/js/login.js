@@ -1,12 +1,39 @@
 window.document.getElementsByTagName("body")[0];
 
-
-function signin()
-{
-    const env = runtimeEnv();
+function signin() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
+    function signingIn(username, password, callback) {
+        return fetch('https://emma-game-server.herokuapp.com/signin', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body:
+                {
+                    "username": username,
+                    "password": password
+                },
+            mode: 'cors'})
+            .then((response) => {
+                return response.json().then((data) => {
+                    console.log(data);
+                    return data;
+                }).catch((err) => {
+                    console.log(err);
+                })
+            });
+    }
+    /*function getActivity() {
+        let jsonData;
+        activitiesActions.checkUserHosting(theEmail).then((data) => {
+            jsonData = data;
+        })
+    }*/
+
+}
     /*
     if (username === "123" && password === "123")
     {
@@ -17,6 +44,7 @@ function signin()
         alert("wrong");
     }*/
 
+    /*
     fetch(`https://emma-game-server.herokuapp.com//signin`, {
         method: 'POST',
         headers: {
@@ -46,8 +74,8 @@ function signin()
             localStorage.setItem('token', res.token);
         })
         .catch( (e) => console.log(e) );
+*/
 
-}
 
 /*
 function signin()
