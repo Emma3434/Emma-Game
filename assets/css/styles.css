@@ -1,0 +1,86 @@
+.profile {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 20%;
+}
+
+.profile-chat {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 20%;
+  margin-right: 1rem;
+}
+
+.comment {
+  display: flex;
+}
+
+.message {
+  padding: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.input-message {
+  font-size: large;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 60px;
+  width: 80%;
+  margin-right: 10px;
+}
+
+.discussion-heading {
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.sticky-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.signin-group {
+  display: flex;
+  justify-content: center;
+}
+
+.signin-label {
+  margin-right: 10px;
+}
+
+.signin-input {
+  padding-left: 10px;
+}
+
+.dashbord-icon {
+  font-size: 25px;
+  width: 40px;
+}
+
+.dashbord-title {
+  font-size: 25px;
+  display: block;
+}
+
+.disscussion-title {
+  font-size: 25px;
+  display: block;
+}
+
+.discussion-admin {
+  font-size: 15px;
+  display: block;
+}
+
+.discussion-description {
+  font-size: 20px;
+  display: block;
+}
+
