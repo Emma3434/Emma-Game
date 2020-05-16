@@ -4,43 +4,27 @@ function signin() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    function signingIn(username, password) {
-        return fetch('https://emma-game-server.herokuapp.com/signin', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body:
-                {
-                    "username": username,
-                    "password": password
-                },
-            mode: 'cors'})
-            .then((response) => {
-                return response.json().then((data) => {
-                    console.log(data);
-                    return data;
-                }).catch((err) => {
-                    console.log(err);
-                })
-            });
-    }
-    if (signingIn(username,password))
-    {
-        alert("success");
-    }
-    else
-    {
-        alert("fail");
-    }
-    /*function getActivity() {
-        let jsonData;
-        activitiesActions.checkUserHosting(theEmail).then((data) => {
-            jsonData = data;
-        })
-    }*/
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+    myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
+    var urlencoded = new URLSearchParams();
+    urlencoded.append("username", "dandan");
+    urlencoded.append("password", "123");
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: urlencoded,
+        redirect: 'follow'
+    };
+
+    fetch("https://emma-game-server.herokuapp.com/signin", requestOptions)
+        .then(response => response.text(), function () {
+            alert("hello???")
+        })
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
 }
     /*
     if (username === "123" && password === "123")
