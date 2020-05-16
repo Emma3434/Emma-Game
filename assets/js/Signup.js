@@ -3,6 +3,28 @@ function signup()
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
+    fetch('${env.REACT_APP_API_URL}/signup', {
+        method:'POST',
+        headers: {
+            'Accept':'application/json',
+            'Content-Type':'application/json'
+        },
+        body:{
+            'username':username,
+            'password':password
+        },
+        mode:'cors'})
+        .then(response => {
+            if (!response.op)
+            {
+                alert("Error with program");
+            }else
+            {
+                alert("Signed up");
+            }
+        })
+        .then(data => console.log(data));
+    /*
     fetch(`${env.REACT_APP_API_URL}/signup`, {
         method: 'POST',
         headers: {
@@ -25,5 +47,5 @@ function signup()
                 return response.json();
             }
         })
-        .catch( (e) => console.log(e) );
+        .catch( (e) => console.log(e) );*/
 }
