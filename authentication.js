@@ -17,16 +17,16 @@ function signin() {
     fetch("https://emma-game-server.herokuapp.com/signin", requestOptions)
       .then(response => response.json())
       .then(result => {
-        console.log(result)
+        console.log(result);
         if (result.success){
             alert("Signed in as " + result.username);
             document.getElementById("user").innerHTML=username;
             //token = JSON.stringify(result.token);
             //username = JSON.stringify(result.username);
-            localStorage.setItem("token", result.token);
-            console.log(localStorage.getItem("token"));
+            //localStorage.setItem("token", result.token);
+            //console.log(localStorage.getItem("token"));
             //console.log(token);
-            window.location.href = "https://emmagame.bss.design/dashboard.html";
+            //window.location.href = "https://emmagame.bss.design/dashboard.html";
         }
         else{
             alert(result.message);
