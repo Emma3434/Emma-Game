@@ -43,7 +43,8 @@
                             //localStorage.setItem("token", result.token);
                             //console.log(localStorage.getItem("token"));
                             //console.log(token);
-                            window.location.href = "https://emma-game.herokuapp.com/dashboard";
+                            //window.location.href = "dashboard";
+                            return result.redirect('/dashboard');
                         }
                         else{
                             alert(result.message);
