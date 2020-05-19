@@ -2,35 +2,12 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>emma game main pave v2</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <% include ../partials/header.ejs %>
 </head>
 
 <body>
     <div>
-        <nav class="navbar navbar-dark navbar-expand-md bg-primary sticky-top">
-            <div class="container-fluid"><a class="navbar-brand" href="#">Emma Game</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse"
-                    id="navcol-1">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="index.ejs">Sign in 登录</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="signup.html">Sign up 注册</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav" style="margin-left: auto;">
-                        <li class="nav-item" role="presentation">
-                            <div class="nav-item dropdown"><a class="dropdown-toggle drop-left" data-toggle="dropdown" aria-expanded="false" href="#"><span class="text-white-50" id="user" style="margin-right: 10px;"></span><img class="profile" src="assets/img/默认头像.jpg"></a>
-                                <div class="dropdown-menu"
-                                    role="menu"><a class="dropdown-item active" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <% include ../partials/nav.ejs %>
     </div>
     <h1 class="discussion-heading">Welcome Back!</h1>
     <div style="margin-top: 20px;">
@@ -38,13 +15,6 @@
         <div class="form-group signin-group"><label class="signin-label">password</label><input class="border rounded border-primary shadow-sm signin-input" type="password" id="password" placeholder="password"></div>
         <div class="form-group d-sm-flex d-md-flex d-lg-flex d-xl-flex signin-group"><button class="btn btn-primary" type="button" onclick="signin()">Sign in</button></div>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/authentication.js"></script>
-    <script src="assets/js/comment.js"></script>
-    <script src="assets/js/discussion.js"></script>
-    <script src="assets/js/game/game-canvas.js"></script>
-    <script src="assets/js/game/game-minesweeper.js"></script>
 </body>
 
 </html>
