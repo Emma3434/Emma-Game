@@ -69,29 +69,3 @@ function signup() {
       .catch(error => console.log('error', error));
 }
 
-function get_discussions()
-{
-    //console.log(localStorage.getItem("token"));
-    
-    /*
-    var myHeaders = new Headers();
-    myHeaders.append("Authorization", token);
-
-    var requestOptions = {
-      method: 'GET',
-      headers: myHeaders,
-      redirect: 'follow'
-    };
-
-    fetch("https://emma-game-server.herokuapp.com/discussions", requestOptions)
-      .then(response => response.text())
-      .then(result => {
-        console.log(result);
-        
-        $('<li class="list-group-item"><span class="disscussion-title"><a href="discussion-content.html">'+welcome+'</a></span><span class="discussion-admin">@'+Emma Wang+'</span><span class="discussion-description">+'This is a default discussion!'+</span></li>').appendTo($('#discussion'));
-        $('#input').val(null);
-    })
-      .catch(error => console.log('error', error));
-    */
-}
-
