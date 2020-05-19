@@ -2,14 +2,14 @@
 <html>
 
 <head>
-    <% include ../partials/header.ejs %>
+    <% include ../../partials/header.ejs %>
 </head>
 
 <body>
     <div>
-        <% include ../partials/nav-dash.ejs %>
+        <% include ../../partials/nav-dash.ejs %>
         <ul class="nav nav-tabs">
-            <li class="nav-item"><a class="nav-link active" href="#">Minesweeper</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Minesweeper</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Second Item</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Third Item</a></li>
         </ul>
@@ -18,10 +18,15 @@
     <table id=grid>
 </table>
 </div>
-        <div
-            class="game-button"><button class="btn btn-primary" type="button" onclick="generateGrid();">Reset Grid</button></div>
+        <div></div>
     </div>
-
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/authentication.js"></script>
+    <script src="../assets/js/comment.js"></script>
+    <script src="../assets/js/discussion.js"></script>
+    <script src="../assets/js/game/game-canvas.js"></script>
+    <script src="../assets/js/game/game-minesweeper.js"></script>
 </body>
 
 </html>
