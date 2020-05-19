@@ -60,7 +60,7 @@ function signup() {
             document.getElementById("user").textContent=username;
             token = JSON.stringify(result.token);
             username = JSON.stringify(result.username);
-            window.location.href = "https://emma-game-server.herokuapp.com/dashboard.ejs";
+            window.location.href = "https://emma-game-server.herokuapp.com/dashboard";
         }
         else{
             alert(result.message);
