@@ -14,6 +14,7 @@ express()
     .get('/discussion', (req, res) => res.render('pages/discussion/discussion'))
     .get('/discussion/content', (req, res) => res.render('pages/discussion/discussion-content'))
     // game pages
+    .get('/game', (req, res) => res.render('pages/game/game'))
     .get('/game/canvas', (req, res) => res.render('pages/game/game-canvas'))
     .get('/game/minesweeper', (req, res) => res.render('pages/game-minesweeper'))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`))
