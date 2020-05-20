@@ -1,8 +1,6 @@
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-const http = requrire('http');
-const fs = require('fs');
 
 express()
     .set('view engine', 'ejs')
