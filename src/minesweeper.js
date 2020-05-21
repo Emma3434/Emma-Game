@@ -5,7 +5,6 @@ var testMode = false; //Turn this variable to true to see where the mines are
 generateGrid();
 
 function generateGrid() {
-    alert("This is a test");
     //generate 10 by 10 grid
     grid.innerHTML = "";
     for (var i = 0; i < 10; i++) {
