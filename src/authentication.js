@@ -64,7 +64,7 @@ function signup() {
                 localStorage.setItem('username', result.username);
                 console.log(localStorage.getItem("username"));
                 //localStorage.setItem('token', result.token);
-                window.location = "https://emma-game.herokuapp.com/dashboard";
+                //window.location = "https://emma-game.herokuapp.com/dashboard";
             } else {
                 alert(result.message);
             }
