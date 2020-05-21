@@ -39,7 +39,7 @@ function signin() {
         */
 }
 
-//signin();
+signin();
 
 /*
 export function signup() {
