@@ -1,9 +1,9 @@
 get_discussion();
+username_record();
 function get_discussion()
 {
     var myHeaders = new Headers();
-    myHeaders.append("Authorization",
-        localStorage.getItem("token"));
+    myHeaders.append("Authorization", localStorage.getItem("token"));
 
     var requestOptions = {
         method: 'GET',

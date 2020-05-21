@@ -1,3 +1,7 @@
+function username_record()
+{
+    document.getElementById("user").innerHTML=localStorage.getItem("username");
+}
 function signin() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
