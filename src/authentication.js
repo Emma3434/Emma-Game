@@ -1,6 +1,4 @@
 function signin() {
-    alert("sign in function");
-    /*
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
@@ -36,10 +34,7 @@ function signin() {
             }
         })
         .catch(error => console.log('error', error));
-        */
 }
-
-signin();
 
 /*
 export function signup() {
