@@ -39,6 +39,8 @@ function signin() {
         */
 }
 
+//signin();
+
 /*
 export function signup() {
     var username = document.getElementById("username-sign").value;
