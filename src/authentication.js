@@ -23,7 +23,7 @@ function signin() {
                 document.getElementById("user").innerHTML=username;
                 //token = JSON.stringify(result.token);
                 //username = JSON.stringify(result.username);
-                localStorage.setItem("token", JSON.stringify(result.token));
+                //localStorage.setItem("token", JSON.stringify(result.token));
                 //console.log(localStorage.getItem("token"));
                 //console.log(token);
                 window.location = "https://emma-game.herokuapp.com/dashboard";
@@ -57,7 +57,7 @@ function signup() {
         .then(result => {
             console.log(result)
             if (result.success) {
-                alert("Successfully signed up! Your username is: " + result.username);
+                alert("Successfully signed up! Your username is: " + username);
                 document.getElementById("user").textContent = username;
                 //token = JSON.stringify(result.token);
                 username = JSON.stringify(result.username);
