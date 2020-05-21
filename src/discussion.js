@@ -12,7 +12,7 @@ function get_discussion()
     };
 
     fetch("https://emma-game-server.herokuapp.com/discussions", requestOptions)
-        .then(response => response.text())
+        .then(response => response.json())
         .then(result =>{
             console.log(result);
             $('<li class="list-group-item"><span class="disscussion-title"><a id="discussion-heading" href="#">'+result.discussion.topic+'</a></span><span id="discussion-admin" class="discussion-admin">@'+result.discussion.admin+'</span><span id="discussion-description" class="discussion-description">'+result.discussion.description+'</span></li>').appendTo($('#discussions'));
