@@ -1,8 +1,13 @@
 //minesweeper game by 101computing.net - www.101computing.et/minesweeper-in-javascript/
 var grid = document.getElementById("grid");
 var testMode = false; //Turn this variable to true to see where the mines are
-generateGrid();
 
+//generateGrid();
+test();
+function test()
+{
+    alert("This is a test");
+}
 
 function generateGrid() {
     //generate 10 by 10 grid
