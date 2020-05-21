@@ -3,13 +3,14 @@
 
 <head>
     <% include ../../partials/basic/header.ejs %>
+    <script src="../discussion.js"></script>
 </head>
 
 <body>
     <div>
         <% include ../../partials/basic/nav-dash.ejs %>
-        <ul class="list-group">
-            <li class="list-group-item" id="discussions"><span class="disscussion-title"><a id="discussion-heading" href="https://emma-game.herokuapp.com/discussion/content">welcome</a></span><span id="discussion-admin" class="discussion-admin">@Emma Wang</span><span id="discussion-description" class="discussion-description">This is a default discussion!</span></li>
+        <ul class="list-group" id="discussions">
+            <li class="list-group-item"><span class="disscussion-title"><a id="discussion-heading" href="https://emma-game.herokuapp.com/discussion/content">welcome</a></span><span id="discussion-admin" class="discussion-admin">@Emma Wang</span><span id="discussion-description" class="discussion-description">This is a default discussion!</span></li>
         </ul>
     </div>
 

@@ -15,9 +15,10 @@ function get_discussion()
         .then(response => response.text())
         .then(result =>{
             console.log(result);
-            if (result.success){
-                alert("discussion successfully got");
-            }
+            $('<li class="list-group-item"><span class="disscussion-title"><a id="discussion-heading" href="#">'+result.discussion.topic+'</a></span><span id="discussion-admin" class="discussion-admin">@'+result.discussion.admin+'</span><span id="discussion-description" class="discussion-description">'+result.discussion.description+'</span></li>').appendTo($('#discussions'));
         })
         .catch(error => console.log('error', error));
+
+
+
 }
