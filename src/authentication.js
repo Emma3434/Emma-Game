@@ -26,7 +26,9 @@ function signin() {
                 //localStorage.setItem("token", JSON.stringify(result.token));
                 //console.log(localStorage.getItem("token"));
                 //console.log(token);
-                window.location = "https://emma-game.herokuapp.com/dashboard";
+                localStorage.setItem('username', result.username);
+                console.log(localStorage.getItem("username"));
+                //window.location = "https://emma-game.herokuapp.com/dashboard";
                 //console.log(process.env);
             }
             else{
@@ -61,8 +63,7 @@ function signup() {
                 document.getElementById("user").textContent = username;
                 //token = JSON.stringify(result.token);
                 username = JSON.stringify(result.username);
-                localStorage.setItem('username', result.username);
-                console.log(localStorage.getItem("username"));
+
                 //localStorage.setItem('token', result.token);
                 //window.location = "https://emma-game.herokuapp.com/dashboard";
             } else {
