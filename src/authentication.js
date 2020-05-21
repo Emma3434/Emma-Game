@@ -36,8 +36,7 @@ function signin() {
         .catch(error => console.log('error', error));
 }
 
-/*
-export function signup() {
+function signup() {
     var username = document.getElementById("username-sign").value;
     var password = document.getElementById("password-sign").value;
 
@@ -69,6 +68,3 @@ export function signup() {
         })
         .catch(error => console.log('error', error));
 }
-
-
- */
