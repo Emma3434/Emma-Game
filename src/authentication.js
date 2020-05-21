@@ -1,4 +1,4 @@
-function signin() {
+export function signin() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
@@ -35,15 +35,15 @@ function signin() {
         })
         .catch(error => console.log('error', error));
 }
-/*
-function signup() {
+
+export function signup() {
     var username = document.getElementById("username-sign").value;
     var password = document.getElementById("password-sign").value;
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    var raw = JSON.stringify({"username":username,"password":password});
+    var raw = JSON.stringify({"username": username, "password": password});
 
     var requestOptions = {
         method: 'POST',
@@ -56,15 +56,15 @@ function signup() {
         .then(response => response.json())
         .then(result => {
             console.log(result)
-            if (result.success){
+            if (result.success) {
                 alert("Successfully signed up! Your username is: " + result.username);
-                document.getElementById("user").textContent=username;
+                document.getElementById("user").textContent = username;
                 //token = JSON.stringify(result.token);
                 username = JSON.stringify(result.username);
                 window.location = "https://emma-game.herokuapp.com/dashboard";
-            }
-            else{
+            } else {
                 alert(result.message);
             }
         })
-        .catch(error => console.log('error', error));*/
+        .catch(error => console.log('error', error));
+}
