@@ -27,7 +27,9 @@ function signin() {
                 //console.log(localStorage.getItem("token"));
                 //console.log(token);
                 localStorage.setItem('username', result.username);
+                localStorage.setItem('token', result.token);
                 console.log(localStorage.getItem("username"));
+                console.log(localStorage.getItem("token"));
                 //window.location = "https://emma-game.herokuapp.com/dashboard";
                 //console.log(process.env);
             }
