@@ -6,7 +6,7 @@ generateGrid();
 function generateGrid() {
   alert("test");
   //generate 10 by 10 grid
-  grid.innerHTML="";
+  //grid.innerHTML="";
   for (var i=0; i<10; i++) {
     row = grid.insertRow(i);
     for (var j=0; j<10; j++) {
