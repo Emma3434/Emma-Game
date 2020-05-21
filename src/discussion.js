@@ -17,7 +17,7 @@ function get_discussion()
             console.log(result);
             for(i = 0; i < result.discussion.length;i++)
             {
-                $('<li class="list-group-item"><span class="disscussion-title"><a id="discussion-heading" href="#">'+result.discussion[i].topic+'</a></span><span id="discussion-admin" class="discussion-admin">@'+result.discussion[i].admin+'</span><span id="discussion-description" class="discussion-description">'+result.discussion[i].description+'</span></li>').appendTo($('#discussions'));
+                $('<li class="list-group-item"><span class="disscussion-title"><a id="discussion-heading" href="https://emma-game.herokuapp.com/discussion/'+result.discussion[i].topic+'">#'+result.discussion[i].topic+'</a></span><span id="discussion-admin" class="discussion-admin">@'+result.discussion[i].admin+'</span><span id="discussion-description" class="discussion-description">'+result.discussion[i].description+'</span></li>').appendTo($('#discussions'));
             }
 
         })
