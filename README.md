@@ -1,39 +1,13 @@
-# node-js-getting-started
+#Emma Game
+This is the official Emma Game platform: https://emma-game.herokuapp.com/discussion
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+#TODO
+Open the website and you will find sign in and sign up options, you can use username 123 and password 123 to login and just check the website, or you can click sign up to sign up your own account.
 
-This application supports the [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+There are tabs in the navigation bar above and click on the specific tabs you want to visit.
 
-## Running Locally
+#Warnings
+1. Currently there is only one game working.
+2. Currently there is only one discussion you can open, and you can enter things to send, however, this comment section is not built yet, thus you cannot save your comments.
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
-
-```sh
-$ git clone https://github.com/heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
-$ npm start
-```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+#Thanks for visiting! --- Emma

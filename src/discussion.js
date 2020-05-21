@@ -15,7 +15,11 @@ function get_discussion()
         .then(response => response.json())
         .then(result =>{
             console.log(result);
-            $('<li class="list-group-item"><span class="disscussion-title"><a id="discussion-heading" href="#">'+result.discussion.topic+'</a></span><span id="discussion-admin" class="discussion-admin">@'+result.discussion.admin+'</span><span id="discussion-description" class="discussion-description">'+result.discussion.description+'</span></li>').appendTo($('#discussions'));
+            for(i = 0; i < result.discussion.length;i++)
+            {
+                $('<li class="list-group-item"><span class="disscussion-title"><a id="discussion-heading" href="#">'+result.discussion[i].topic+'</a></span><span id="discussion-admin" class="discussion-admin">@'+result.discussion[i].admin+'</span><span id="discussion-description" class="discussion-description">'+result.discussion[i].description+'</span></li>').appendTo($('#discussions'));
+            }
+
         })
         .catch(error => console.log('error', error));
 
