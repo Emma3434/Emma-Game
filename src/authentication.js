@@ -21,17 +21,11 @@ function signin() {
             if (result.success){
                 alert("Signed in as " + result.username);
                 document.getElementById("user").innerHTML=username;
-                //token = JSON.stringify(result.token);
-                //username = JSON.stringify(result.username);
-                //localStorage.setItem("token", JSON.stringify(result.token));
-                //console.log(localStorage.getItem("token"));
-                //console.log(token);
                 localStorage.setItem('username', result.username);
                 localStorage.setItem('token', result.token);
-                console.log(localStorage.getItem("username"));
-                console.log(localStorage.getItem("token"));
-                //window.location = "https://emma-game.herokuapp.com/dashboard";
-                //console.log(process.env);
+                //console.log(localStorage.getItem("username"));
+                //console.log(localStorage.getItem("token"));
+                window.location = "https://emma-game.herokuapp.com/dashboard";
             }
             else{
                 alert(result.message);
@@ -61,13 +55,13 @@ function signup() {
         .then(result => {
             console.log(result)
             if (result.success) {
-                alert("Successfully signed up! Your username is: " + username);
-                document.getElementById("user").textContent = username;
-                //token = JSON.stringify(result.token);
-                username = JSON.stringify(result.username);
-
-                //localStorage.setItem('token', result.token);
-                //window.location = "https://emma-game.herokuapp.com/dashboard";
+                alert("Successfully signed up! Your username is " + result.username);
+                document.getElementById("user").innerHTML=username;
+                localStorage.setItem('username', result.username);
+                localStorage.setItem('token', result.token);
+                //console.log(localStorage.getItem("username"));
+                //console.log(localStorage.getItem("token"));
+                window.location = "https://emma-game.herokuapp.com/dashboard";
             } else {
                 alert(result.message);
             }
