@@ -1,4 +1,6 @@
-export function signin() {
+function signin() {
+    alert("sign in function");
+    /*
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
@@ -34,8 +36,10 @@ export function signin() {
             }
         })
         .catch(error => console.log('error', error));
+        */
 }
 
+/*
 export function signup() {
     var username = document.getElementById("username-sign").value;
     var password = document.getElementById("password-sign").value;
@@ -68,3 +72,6 @@ export function signup() {
         })
         .catch(error => console.log('error', error));
 }
+
+
+ */
