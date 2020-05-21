@@ -2,14 +2,10 @@
 var grid = document.getElementById("grid");
 var testMode = false; //Turn this variable to true to see where the mines are
 
-//generateGrid();
-test();
-function test()
-{
-    alert("This is a test");
-}
+generateGrid();
 
 function generateGrid() {
+    alert("This is a test");
     //generate 10 by 10 grid
     grid.innerHTML = "";
     for (var i = 0; i < 10; i++) {
