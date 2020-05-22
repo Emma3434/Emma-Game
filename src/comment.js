@@ -20,7 +20,7 @@ function get_messages()
         .then(result => {
             console.log(result);
             for (i = 0 ; i < result.discussion.comments.length ; i++){
-                $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="https://emmagame.bss.design/assets/img/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.jpg?h=34454633352f5133a154d68fba8127d0"><div><span class="d-block">'+result.discussion.comments.username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ result.discussion.comments.message +'</span><span class="d-block">'+result.discussion.comments.time+'</span></div></li>').appendTo($('#discussion'));
+                $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+result.discussion.comments.username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ result.discussion.comments.message +'</span><span class="d-block">'+result.discussion.comments.time+'</span></div></li>').appendTo($('#discussion'));
             }
         })
         .catch(error => console.log('error', error));
