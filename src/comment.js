@@ -1,4 +1,4 @@
-get_messages();
+window.addEventListener('load', get_messages);
 function get_messages()
 {
     var myHeaders = new Headers();
@@ -20,7 +20,7 @@ function get_messages()
         .then(result => {
             console.log(result);
             for (i = 0 ; i < result.discussion.comments.length ; i++){
-                $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+result.discussion.comments.username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ result.discussion.comments.message +'</span><span class="d-block">'+result.discussion.comments.time+'</span></div></li>').appendTo($('#discussion'));
+                $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+result.discussion.comments[i].username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ result.discussion.comments[i].message +'</span><span class="d-block">'+result.discussion.comments[i].time+'</span></div></li>').appendTo($('#discussion'));
             }
         })
         .catch(error => console.log('error', error));
