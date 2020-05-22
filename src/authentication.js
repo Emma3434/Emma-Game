@@ -1,8 +1,9 @@
+window.addEventListener('load', username_record);
 function username_record()
 {
-    var username = localStorage.getItem("username");
-    document.getElementById("user").innerHTML=username;
+    document.getElementById("user").innerHTML=localStorage.getItem('username');
 }
+
 function signin() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;

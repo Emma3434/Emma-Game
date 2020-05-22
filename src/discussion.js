@@ -1,5 +1,5 @@
 get_discussion();
-username_record();
+
 function get_discussion()
 {
     var myHeaders = new Headers();
