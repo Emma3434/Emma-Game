@@ -1,5 +1,6 @@
 function username_record()
 {
+    username = localStorage.getItem("username");
     document.getElementById("user").innerHTML=localStorage.getItem("username");
 }
 function signin() {
