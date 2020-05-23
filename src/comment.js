@@ -55,46 +55,12 @@ function send_message()
         .then(response => response.text())
         .then(result => {
             console.log(result);
-            $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ message +'</span><span class="d-block">'+time+'</span></div></li>').appendTo($('#discussion'));
+            /*$('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ message +'</span><span class="d-block">'+time+'</span></div></li>').appendTo($('#discussion'));*/
             document.getElementById("input").value = '';
             window.location.reload();
+            alert("does this work?");
         })
         .catch(error => console.log('error', error));
-
-
-
-    /*
-        var myHeaders = new Headers();
-        myHeaders.append("Authorization", localStorage.getItem("token"));
-        myHeaders.append("Content-Type", "application/json");
-
-        var raw = {
-            "username": username,
-            "message": message,
-            "topic": topic,
-            "time": time
-        };
-
-        var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow'
-        };
-
-        fetch("https://emma-game-server.herokuapp.com/comment", requestOptions)
-            .then(response => response.text())
-            .then(result => {
-                console.log(result);
-                if (result.success)
-                {
-                    alert("thank you for sending comment on this topic!");
-                    $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ message +'</span><span class="d-block">'+time+'</span></div></li>').appendTo($('#discussion'));
-                    document.getElementById("input").innerHTML = '';
-                }
-            })
-            .catch(error => console.log('error', error));
-*/
 }
 
 
