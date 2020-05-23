@@ -31,6 +31,8 @@ function send_message()
     time = new Date().toGMTString();
     var message = document.getElementById("input").value;
     var username = document.getElementById("user");
+    var discussion_header = document.getElementById("discussion-header").split("#");
+    var topic = discussion_header[1];
 
     if(message == '') {
         alert("Cannot send empty message");
@@ -45,7 +47,7 @@ function send_message()
         var raw = {
             "username": username,
             "message": message,
-            "topic": document.getElementById("discussion-header"),
+            "topic": topic,
             "time": time
         };
 
