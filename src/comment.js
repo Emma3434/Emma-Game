@@ -10,13 +10,7 @@ function get_messages()
         redirect: 'follow'
     };
 
-    var path = window.location.pathname.split('/');
-
-
-
     var url = 'https://emma-game-server.herokuapp.com'+window.location.pathname;
-    console.log(url);
-
 
     fetch(url, requestOptions)
         .then(response => response.json())
@@ -32,19 +26,50 @@ function get_messages()
 
 }
 
-function sendmessage()
+function send_message()
 {
     time = new Date();
     var message = document.getElementById("input").value;
-    //username = req.body.username();
+    var username = localStorage.getItem("user").value;
 
-    if(message === '') {
-        alert("Cannot send empty message")
+    if(message == '') {
+        alert("Cannot send empty message");
     }
 
-    $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="https://emmagame.bss.design/assets/img/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.jpg?h=34454633352f5133a154d68fba8127d0"><div><span class="d-block"> anonymous</span><span class="border rounded border-primary shadow-sm d-block message">'+ message +'</span><span class="d-block">'+time+'</span></div></li>').appendTo($('#discussion'));
-    document.getElementById("input").innerHTML = '';
-    alert ("Message sent!");
+
+        $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ message +'</span><span class="d-block">'+time+'</span></div></li>').appendTo($('#discussion'));
+        document.getElementById("input").innerHTML = '';
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+        myHeaders.append("Authorization", localStorage.getItem("token"));
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = {
+            "username": username,
+            "message": message,
+            "topic": document.getElementById("discussion-header"),
+            "time": time
+        };
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        fetch("https://emma-game-server.herokuapp.com/comment", requestOptions)
+            .then(response => response.text())
+            .then(result => {
+                console.log(result);
+                if (result.success)
+                {
+                    alert("thank you for sending comment on this topic!");
+                }
+            })
+            .catch(error => console.log('error', error));
+
 }
 
 
