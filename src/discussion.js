@@ -17,7 +17,7 @@ function get_discussion()
             console.log(result);
             for(i = 0; i < result.discussion.length;i++)
             {
-                $('<li class="list-group-item"><span class="disscussion-title"><a id="discussion-heading"  onclick="save_id()">#'+result.discussion[i].topic+'</a></span><span id="discussion-admin" class="discussion-admin">@'+result.discussion[i].admin+'</span><span id="discussion-description" class="discussion-description">'+result.discussion[i].description+'</span><p id="discussion-id" hidden>'+result.discussion[i].id+'</p></li>').appendTo($('#discussions'));
+                $('<li class="list-group-item"><span class="disscussion-title"><a id="discussion-heading"  onclick="save_id()">#'+result.discussion[i].topic+'</a></span><span id="discussion-admin" class="discussion-admin">@'+result.discussion[i].admin+'</span><span id="discussion-description" class="discussion-description">'+result.discussion[i].description+'</span><p id="discussion-id">'+result.discussion[i].id+'</p></li>').appendTo($('#discussions'));
             }
 
         })
