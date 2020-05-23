@@ -30,7 +30,7 @@ function send_message()
 {
     time = new Date();
     var message = document.getElementById("input").value;
-    var username = localStorage.getItem("user").value;
+    var username = document.getElementById("user");
 
     if(message == '') {
         alert("Cannot send empty message");
