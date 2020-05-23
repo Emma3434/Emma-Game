@@ -30,11 +30,11 @@ function send_message()
 {
     time = new Date().toGMTString();
     var message = document.getElementById("input").value;
-    var username = document.getElementById("user").value;
+    var username = document.getElementById("user").innerHTML;
     var discussion_header = document.getElementById("discussion-header").innerHTML.split("#");
     var topic = discussion_header[1];
 
-    console.log("getelement of user: "+document.getElementById("user").value);
+    console.log("getelement of user: "+document.getElementById("user").innerHTML);
     console.log("username: "+username);
 
     if(message == '') {
