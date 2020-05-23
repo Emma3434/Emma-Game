@@ -37,7 +37,7 @@
   align-items: center;
   justify-content: center;
   display: flex;
-  font-weight:700;
+  font-weight:600;
 }
 
 
@@ -77,7 +77,7 @@
   padding-top: 7px;
   padding-bottom: 7px;
   display: block;
-  font-weight:700;
+  font-weight:600;
 }
 
 .discussion-admin {
