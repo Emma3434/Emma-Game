@@ -10,10 +10,8 @@ function get_messages()
         redirect: 'follow'
     };
 
-
-    url = "https://emma-game-server.herokuapp.com/discussions/"+localStorage.getItem("topic").toString();
-    console.log(localStorage.getItem("topic"));
-    console.log(url);
+    console.log(window.location);
+    console.log(window.location.pathname);
     /*
     fetch(url, requestOptions)
         .then(response => response.json())

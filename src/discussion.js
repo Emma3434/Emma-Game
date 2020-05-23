@@ -23,10 +23,3 @@ function get_discussion()
         })
         .catch(error => console.log('error', error));
 }
-
-//href="https://emma-game.herokuapp.com/discussion/content"
-function save_id(){
-    /*localStorage.setItem("topic", document.getElementById("discussion-id").value);
-    console.log(document.getElementById("discussion-id").innerHTML);
-    console.log(localStorage.getItem("topic"));*/
-}
