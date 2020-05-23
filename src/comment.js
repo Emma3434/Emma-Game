@@ -12,10 +12,13 @@ function get_messages()
 
     var pathArray = window.location.pathname.split('/');
 
-    console.log(pathArray);
-    console.log(window.location.pathname);
+
+
+    var url = 'https://emma-game.herokuapp.com'+window.location.pathname;
+    console.log(url);
+    
     /*
-    fetch(url, requestOptions)
+    fetch('https://emma-game.herokuapp.com/discussion/5ebf17140c5d3c000499770b'+window.location.pathname, requestOptions)
         .then(response => response.json())
         .then(result => {
             console.log(result);
