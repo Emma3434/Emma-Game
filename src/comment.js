@@ -18,7 +18,7 @@ function get_messages()
             console.log(result);
             document.getElementById("discussion-header").innerHTML = '#' + result.discussion[0].topic;
             for (i = 0 ; i < result.discussion[0].comments.length ; i++){
-                $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+result.discussion[0].comments[i].username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ result.discussion[0].comments[i].message +'</span><span class="d-block">'+result.discussion[0].comments[i].time+'</span></div></li>').appendTo($('#discussion'));
+                $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="text-muted d-block">'+result.discussion[0].comments[i].username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ result.discussion[0].comments[i].message +'</span><span class="text-muted d-block">'+result.discussion[0].comments[i].time+'</span></div></li>').appendTo($('#discussion'));
             }
         })
         .catch(error => console.log('error', error));
