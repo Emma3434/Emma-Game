@@ -34,9 +34,6 @@ function send_message()
     var discussion_header = document.getElementById("discussion-header").innerHTML.split("#");
     var topic = discussion_header[1];
 
-    console.log("getelement of user: "+document.getElementById("user").innerHTML);
-    console.log("username: "+username);
-
     if(message == '') {
         alert("Cannot send empty message");
     }
@@ -45,7 +42,7 @@ function send_message()
     myHeaders.append("Authorization", localStorage.getItem("token"));
     myHeaders.append("Content-Type", "application/json");
 
-    var raw = JSON.stringify({"username":username,"message":message,"topic":"the first discussion","time":"20200522 23:25"});
+    var raw = JSON.stringify({"username":username,"message":message,"topic":topic,"time":time});
 
     var requestOptions = {
         method: 'POST',
