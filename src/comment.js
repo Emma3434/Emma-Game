@@ -30,7 +30,7 @@ function send_message()
 {
     time = new Date().toGMTString();
     var message = document.getElementById("input").value;
-    var username = document.getElementById("user");
+    var username = document.getElementById("user").value;
     var discussion_header = document.getElementById("discussion-header").innerHTML.split("#");
     var topic = discussion_header[1];
 
