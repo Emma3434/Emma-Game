@@ -24,10 +24,18 @@ function create_discussion(){
     };
 
     fetch("https://emma-game-server.herokuapp.com/discussions", requestOptions)
-        .then(response => response.text())
+        .then(response => response.json())
         .then(result => {
             console.log(result);
+            if (result.success)
+            {
                 alert(result.message);
+            }
+            else
+            {
+                alert ("The discussion cannot be created");
+            }
+            
         })
         .catch(error => console.log('error', error));
 }
