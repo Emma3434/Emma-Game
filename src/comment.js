@@ -28,7 +28,7 @@ function get_messages()
 
 function send_message()
 {
-    time = new Date();
+    time = new Date().toGMTString();
     var message = document.getElementById("input").value;
     var username = document.getElementById("user");
 
@@ -36,9 +36,6 @@ function send_message()
         alert("Cannot send empty message");
     }
 
-
-        $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ message +'</span><span class="d-block">'+time+'</span></div></li>').appendTo($('#discussion'));
-        document.getElementById("input").innerHTML = '';
 
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
@@ -66,6 +63,8 @@ function send_message()
                 if (result.success)
                 {
                     alert("thank you for sending comment on this topic!");
+                    $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ message +'</span><span class="d-block">'+time+'</span></div></li>').appendTo($('#discussion'));
+                    document.getElementById("input").innerHTML = '';
                 }
             })
             .catch(error => console.log('error', error));
