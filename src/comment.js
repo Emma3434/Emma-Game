@@ -11,7 +11,8 @@ function get_messages()
     };
 
 
-    fetch("https://emma-game-server.herokuapp.com/discussions/"+localStorage.getItem("topic").toString(), requestOptions)
+    url = "https://emma-game-server.herokuapp.com/discussions/"+localStorage.getItem("topic").toString();
+    fetch(url, requestOptions)
         .then(response => response.json())
         .then(result => {
             console.log(result);
