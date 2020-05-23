@@ -1,6 +1,7 @@
 window.addEventListener('load', get_messages);
 function get_messages()
 {
+    document.getElementById("discussion").clear();
     var myHeaders = new Headers();
     myHeaders.append("Authorization", localStorage.getItem("token"));
 
