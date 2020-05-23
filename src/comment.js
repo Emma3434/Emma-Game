@@ -31,7 +31,7 @@ function send_message()
     time = new Date().toGMTString();
     var message = document.getElementById("input").value;
     var username = document.getElementById("user");
-    var discussion_header = document.getElementById("discussion-header").split("#");
+    var discussion_header = document.getElementById("discussion-header").innerHTML.split("#");
     var topic = discussion_header[1];
 
     if(message == '') {
