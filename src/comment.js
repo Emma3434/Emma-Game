@@ -42,7 +42,39 @@ function send_message()
         alert("Cannot send empty message");
     }
 
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+    myHeaders.append("Authorization",  localStorage.getItem("token"));
+    myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
+    var urlencoded = new URLSearchParams();
+    urlencoded.append("username", "dandan");
+    urlencoded.append("message", "I really love this first discussion, it is really nice!");
+    urlencoded.append("topic", "the first discussion");
+    urlencoded.append("time", "20200522 23:25");
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: urlencoded,
+        redirect: 'follow'
+    };
+
+    fetch("https://emma-game-server.herokuapp.com/comment", requestOptions)
+        .then(response => response.text())
+        .then(result => {
+            console.log(result);
+            if (result.success)
+            {
+                alert("thank you for sending comment on this topic!");
+                $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ message +'</span><span class="d-block">'+time+'</span></div></li>').appendTo($('#discussion'));
+                document.getElementById("input").innerHTML = '';
+            }
+        })
+        .catch(error => console.log('error', error));
+
+
+    /*
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
         myHeaders.append("Authorization", localStorage.getItem("token"));
@@ -74,7 +106,7 @@ function send_message()
                 }
             })
             .catch(error => console.log('error', error));
-
+*/
 }
 
 
