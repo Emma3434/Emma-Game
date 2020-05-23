@@ -13,9 +13,14 @@ function get_messages()
     fetch("https://emma-game-server.herokuapp.com/discussions/5ebf10fa0948030004a91b50", requestOptions)
         .then(response => response.text())
         .then(result => {
-            console.log(result)
+            console.log(result);
+            if (result.success)
+            {
+                alert("successfully got the result discussion!");
+            }
+            /*
             for (i = 0 ; i < result.discussion.comments.length ; i++){
-                $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+result.discussion.comments[i].username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ result.discussion.comments[i].message +'</span><span class="d-block">'+result.discussion.comments[i].time+'</span></div></li>').appendTo($('#discussion'));
+                $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+result.discussion.comments[i].username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ result.discussion.comments[i].message +'</span><span class="d-block">'+result.discussion.comments[i].time+'</span></div></li>').appendTo($('#discussion'));*/
             }
         })
         .catch(error => console.log('error', error));
