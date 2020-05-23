@@ -10,11 +10,11 @@ function get_messages()
         redirect: 'follow'
     };
 
-    var pathArray = window.location.pathname.split('/');
+    var path = window.location.pathname.split('/');
 
 
 
-    var url = 'https://emma-game-server.herokuapp.com'+window.location.pathname;
+    var url = 'https://emma-game-server.herokuapp.com/discussions/'+path[2];
     console.log(url);
 
 
