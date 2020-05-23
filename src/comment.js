@@ -51,7 +51,7 @@ function send_message()
         var raw = {
             "username": username,
             "message": message,
-            "topic": topic,
+            "topic": topic.toString(),
             "time": time
         };
 
