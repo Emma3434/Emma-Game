@@ -14,6 +14,7 @@ express()
     .get('/signup', (req, res) => res.render('pages/basic/signup'))
     // discussion pages
     .get('/discussions', (req, res) => res.render('pages/discussion/discussion'))
+    .get('/discussions/create', (req, res) => res.render('pages/discussion/discussion-create'))
     .get('/discussions/:discussionId', (req, res) => res.render('pages/discussion/discussion-content'))
     // game pages
     .get('/game/minesweeper', (req, res) => res.render('pages/game/game-minesweeper'))

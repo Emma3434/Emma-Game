@@ -109,3 +109,14 @@
 {
   margin:10px
 }
+
+.discussion-create-addon
+{
+  width: 130px;
+  justify-content: center;
+}
+
+.discussion-create-inputgroup
+{
+  margin:10px
+}
