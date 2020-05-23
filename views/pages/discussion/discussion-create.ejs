@@ -3,7 +3,7 @@
 
 <head>
     <% include ../../partials/basic/header.ejs %>
-    <script src="../discussion.js"></script>
+    <script src="../discussion-create.js"></script>
 </head>
 
 <body>
@@ -20,9 +20,7 @@
             <label for = "discussion-create-admin">Administrator</label>
             <input type="text" class="form-control" id="discussion-create-admin" placeholder = "" readonly>
             <script type="text/javascript">
-                document.getElementById("discussion-create-admin").innerHTML = document.getElementById("user").innerHTML;
-                console.log(document.getElementById("discussion-create-admin").innerHTML);
-                console.log(document.getElementById("user").innerHTML);
+
             </script>
         </div>
         <div class="form-group">
