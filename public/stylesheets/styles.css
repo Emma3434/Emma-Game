@@ -39,6 +39,7 @@
   display: flex;
 }
 
+
 .sticky-bottom {
   position: fixed;
   bottom: 0;
@@ -67,13 +68,15 @@
 .dashbord-title {
   font-size: 25px;
   display: block;
+  font-weight:700;
 }
 
-.disscussion-title {
-  font-size: 20px;
+.discussion-title {
+  font-size: 25px;
   padding-top: 7px;
   padding-bottom: 7px;
   display: block;
+  font-weight:700;
 }
 
 .discussion-admin {
