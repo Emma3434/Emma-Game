@@ -30,6 +30,7 @@ function create_discussion(){
             if (result.success)
             {
                 alert(result.message);
+                window.location = "https://emma-game.herokuapp.com/discussion";
             }
             else
             {
