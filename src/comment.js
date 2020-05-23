@@ -46,7 +46,7 @@ function send_message()
     myHeaders.append("Authorization", localStorage.getItem("token"));
     myHeaders.append("Content-Type", "application/json");
 
-    var raw = JSON.stringify({"username":"dandan","message":message,"topic":"the first discussion","time":"20200522 23:25"});
+    var raw = JSON.stringify({"username":username,"message":message,"topic":"the first discussion","time":"20200522 23:25"});
 
     var requestOptions = {
         method: 'POST',
