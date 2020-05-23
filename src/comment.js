@@ -12,7 +12,7 @@ function get_messages()
 
     var pathArray = window.location.pathname.split('/');
 
-    console.log(window.pathArray);
+    console.log(pathArray);
     console.log(window.location.pathname);
     /*
     fetch(url, requestOptions)
