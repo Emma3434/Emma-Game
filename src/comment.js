@@ -34,14 +34,37 @@ function send_message()
     var discussion_header = document.getElementById("discussion-header").innerHTML.split("#");
     var topic = discussion_header[1];
 
-    console.log("discussion_header"+discussion_header);
-    console.log("topic"+topic);
-    console.log("document"+document.getElementById("discussion-header").innerHTML);
+    console.log("discussion_header: "+discussion_header);
+    console.log("topic: "+topic);
+    console.log("document: "+document.getElementById("discussion-header").innerHTML);
 
     if(message == '') {
         alert("Cannot send empty message");
     }
 
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", localStorage.getItem("token"));
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({"username":"dandan","message":message,"topic":"the first discussion","time":"20200522 23:25"});
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    };
+
+    fetch("https://emma-game-server.herokuapp.com/comment", requestOptions)
+        .then(response => response.text())
+        .then(result => {
+            console.log(result);
+            $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ message +'</span><span class="d-block">'+time+'</span></div></li>').appendTo($('#discussion'));
+            document.getElementById("input").innerHTML = '';
+        })
+        .catch(error => console.log('error', error));
+
+    /*
         var myHeaders = new Headers();
         myHeaders.append("Authorization", localStorage.getItem("token"));
         myHeaders.append("Content-Type", "application/json");
@@ -49,7 +72,7 @@ function send_message()
         var raw = {
             "username": username,
             "message": message,
-            "topic": "the first discussion",
+            "topic": topic,
             "time": time
         };
 
@@ -72,7 +95,7 @@ function send_message()
                 }
             })
             .catch(error => console.log('error', error));
-
+*/
 }
 
 
