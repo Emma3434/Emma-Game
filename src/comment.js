@@ -12,6 +12,9 @@ function get_messages()
 
 
     url = "https://emma-game-server.herokuapp.com/discussions/"+localStorage.getItem("topic").toString();
+    console.log(localStorage.getItem("topic"));
+    console.log(url);
+    /*
     fetch(url, requestOptions)
         .then(response => response.json())
         .then(result => {
@@ -22,6 +25,8 @@ function get_messages()
             }
         })
         .catch(error => console.log('error', error));
+
+     */
 }
 
 function sendmessage()
