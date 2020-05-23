@@ -10,7 +10,9 @@ function get_messages()
         redirect: 'follow'
     };
 
-    console.log(window.location);
+    var pathArray = window.location.pathname.split('/');
+
+    console.log(window.pathArray);
     console.log(window.location.pathname);
     /*
     fetch(url, requestOptions)
