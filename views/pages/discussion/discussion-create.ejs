@@ -18,9 +18,10 @@
         </div>
         <div class="form-group">
             <label for = "discussion-create-admin">Administrator</label>
-            <input type="text" class="form-control" id="discussion-create-admin" placeholder = "">
+            <input type="text" class="form-control" id="discussion-create-admin" placeholder = "" readonly>
             <script type="text/javascript">
-                document.getElementById("discussion-create-admin").placeholder = document.getElementById("user").innerHTML;
+                document.getElementById("discussion-create-admin").innerHTML = document.getElementById("user").innerHTML;
+                console.log(document.getElementById("discussion-create-admin").innerHTML);
             </script>
         </div>
         <div class="form-group">
