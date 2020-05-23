@@ -48,6 +48,13 @@
   right: 0;
 }
 
+.sticky-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 .signin-group {
   display: flex;
   justify-content: center;
