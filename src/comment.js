@@ -1,7 +1,6 @@
 window.addEventListener('load', get_messages);
 function get_messages()
 {
-    document.getElementById("discussion").clear();
     var myHeaders = new Headers();
     myHeaders.append("Authorization", localStorage.getItem("token"));
 
@@ -58,10 +57,11 @@ function send_message()
             console.log(result);
             $('<li class="list-group-item align-items-xl-start comment"><img class="profile-chat" src="../image/default.jpg"><div><span class="d-block">'+username+'</span><span class="border rounded border-primary shadow-sm d-block message">'+ message +'</span><span class="d-block">'+time+'</span></div></li>').appendTo($('#discussion'));
             document.getElementById("input").value = '';
+            window.location.reload();
         })
         .catch(error => console.log('error', error));
 
-    get_messages();
+
 
     /*
         var myHeaders = new Headers();
