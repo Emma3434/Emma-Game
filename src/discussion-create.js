@@ -27,14 +27,7 @@ function create_discussion(){
         .then(response => response.text())
         .then(result => {
             console.log(result);
-            if (result.success == "true")
-            {
                 alert(result.message);
-            }
-            else
-            {
-                alert("This request is not ok!")
-            }
         })
         .catch(error => console.log('error', error));
 }
