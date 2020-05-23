@@ -1,14 +1,14 @@
 window.addEventListener('load', discussion_set_admin);
 function discussion_set_admin(){
-    document.getElementById("discussion-create-admin").innerHTML = document.getElementById("user").innerHTML;
-    console.log(document.getElementById("discussion-create-admin").innerHTML);
+    document.getElementById("discussion-create-admin").value = document.getElementById("user").innerHTML;
+    console.log(document.getElementById("discussion-create-admin").value);
     console.log(document.getElementById("user").innerHTML);
 }
 
 function create_discussion(){
-    var topic = document.getElementById("discussion-create-topic").innerHTML;
-    var admin = document.getElementById("discussion-create-admin").innerHTML;
-    var description = document.getElementById("discussion-create-description").innerHTML;
+    var topic = document.getElementById("discussion-create-topic").value;
+    var admin = document.getElementById("discussion-create-admin").value;
+    var description = document.getElementById("discussion-create-description").value;
 
     var myHeaders = new Headers();
     myHeaders.append("Authorization", localStorage.getItem("token"));
