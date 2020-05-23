@@ -14,7 +14,7 @@ function get_messages()
 
 
 
-    var url = 'https://emma-game-server.herokuapp.com/discussions/'+path[2];
+    var url = 'https://emma-game-server.herokuapp.com'+window.location.pathname;
     console.log(url);
 
 
