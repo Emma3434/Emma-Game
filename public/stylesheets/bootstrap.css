@@ -13,14 +13,15 @@
     --white:#fff;
     --gray:#6c757d;
     --gray-dark:#343a40;
-    --primary:#007bff;
-    --secondary:#6c757d;
-    --success:#28a745;
-    --info:#17a2b8;
-    --warning:#ffc107;
-    --danger:#dc3545;
-    --light:#f8f9fa;
-    --dark:#343a40;
+
+    --primary: #377c5a;
+    --secondary: #7d553b;
+    --success: #64b470;
+    --info: #b8ac67;
+    --warning: #ffc087;
+    --danger: #ad474f;
+    --light: #98b9a5;
+    --dark: rgba(50, 71, 58, 0.98);
     --breakpoint-xs:0;
     --breakpoint-sm:576px;
     --breakpoint-md:768px;

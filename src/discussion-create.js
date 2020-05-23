@@ -35,7 +35,7 @@ function create_discussion(){
             {
                 alert ("The discussion cannot be created");
             }
-            
+
         })
         .catch(error => console.log('error', error));
 }
