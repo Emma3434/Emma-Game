@@ -34,9 +34,8 @@ function send_message()
     var discussion_header = document.getElementById("discussion-header").innerHTML.split("#");
     var topic = discussion_header[1];
 
-    console.log("discussion_header: "+discussion_header);
-    console.log("topic: "+topic);
-    console.log("document: "+document.getElementById("discussion-header").innerHTML);
+    console.log("getelement of user: "+document.getElementById("user").value);
+    console.log("username: "+username);
 
     if(message == '') {
         alert("Cannot send empty message");
