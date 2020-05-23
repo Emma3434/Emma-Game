@@ -61,6 +61,8 @@ function send_message()
         })
         .catch(error => console.log('error', error));
 
+    get_messages();
+
     /*
         var myHeaders = new Headers();
         myHeaders.append("Authorization", localStorage.getItem("token"));
