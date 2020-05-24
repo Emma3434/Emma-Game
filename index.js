@@ -16,6 +16,8 @@ express()
     .get('/discussions', (req, res) => res.render('pages/discussion/discussion'))
     .get('/discussions/create', (req, res) => res.render('pages/discussion/discussion-create'))
     .get('/discussions/:discussionId', (req, res) => res.render('pages/discussion/discussion-content'))
+
+    .get('/chatroom', (req, res) => res.render('pages/game/chatroom'))
     // game pages
     .get('/game/minesweeper', (req, res) => res.render('pages/game/game-minesweeper'))
     .get('/game/canvas', (req, res) => res.render('pages/game/game-canvas'))
