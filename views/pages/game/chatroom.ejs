@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <% include ../../partials/basic/header.ejs %>
     <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
     <!--<script type='text/javascript' src='http://0.0.0.0:8080/scaledrone.js'></script>-->
     <meta charset="utf-8">
@@ -57,13 +58,14 @@
     </style>
 </head>
 <body>
-<div class="members-count">-</div>
-<div class="members-list">-</div>
-<div class="messages"></div>
-<form class="message-form" onsubmit="return false;">
-    <input class="message-form__input" placeholder="Type a message.." type="text"/>
-    <input class="message-form__button" value="Send" type="submit"/>
-</form>
+    <% include ../../partials/basic/nav-dash.ejs %>
+    <div class="members-count">-</div>
+    <div class="members-list">-</div>
+    <div class="messages"></div>
+    <form class="message-form" onsubmit="return false;">
+        <input class="message-form__input" placeholder="Type a message.." type="text"/>
+        <input class="message-form__button" value="Send" type="submit"/>
+    </form>
 <script>
     // PS! Replace this with your own channel ID
     // If you use this channel ID your app will stop working in the future
