@@ -1,5 +1,5 @@
 #Emma Game
-This is the official Emma Game platform: https://emma-game.herokuapp.com/discussion
+This is the official Emma Game platform: https://emma-game.herokuapp.com
 
 #TODO
 Open the website and you will find sign in and sign up options, you can use username 123 and password 123 to login and just check the website, or you can click sign up to sign up your own account.

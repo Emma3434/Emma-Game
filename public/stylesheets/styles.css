@@ -83,7 +83,7 @@
 .discussion-title {
   font-size: 25px;
   padding-top: 7px;
-  padding-bottom: 7px;
+  padding-bottom: 0px;
   display: block;
   font-weight:600;
 }
